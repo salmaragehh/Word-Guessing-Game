@@ -1,0 +1,43 @@
+﻿<!-- 
+  Filename: GameWindow.xaml
+  Project: Word Guessing Game
+  By: Salma Rageh  
+  Date: 2023-11-29
+  Description: This file is the xaml for the Game Window. 
+ -->
+    <Window x:Class="Client.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Client"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="475" Width="800">
+    <Grid Background="#B6DBF7">
+        <Label Content="Word Guessing Game" FontSize="50" FontFamily="Times, Times New Roman, serif" FontWeight="Bold" HorizontalAlignment="Center" Margin="0,39,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Width="480">
+            <Label.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform Angle="0.288"/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </Label.RenderTransform>
+        </Label>
+        <TextBlock FontSize="23" HorizontalAlignment="Center" FontFamily="Times, Times New Roman, serif" TextAlignment="Center" Name="wordString" Margin="0,133,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="780" Height="38"/>
+        <TextBox HorizontalAlignment="Center" FontFamily="Times, Times New Roman, serif" FontSize="25" Name="wordGuessBox" Margin="0,248,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="204" Height="30"/>
+        <Button Name="submitGuess" Content="Submit Guess!" FontFamily="Times, Times New Roman, serif" FontSize="25" HorizontalAlignment="Center" Margin="0,316,0,0" VerticalAlignment="Top" Click="SubmitGuess_Click"/>
+        <Button Name="endGame" Content="End Game" Foreground="DarkRed" FontSize="25" FontFamily="Times, Times New Roman, serif" HorizontalAlignment="Center" Margin="0,362,0,0" VerticalAlignment="Top" Click="EndGame_Click"/>
+        <StatusBar Margin="0,400,0,0">
+            <TextBlock Name="correctWordLabel" TextWrapping="Wrap" Text="Number of correct words:" FontSize="23" Width="243" FontFamily="Times, Times New Roman, serif"/>
+            <TextBlock TextWrapping="Wrap" Name="numCorrectWordsBox" Text="0" FontSize="23" Foreground="DarkGreen" FontFamily="Times, Times New Roman, serif" Width="116"/>
+        </StatusBar>
+        <TextBlock Name="numWordsLabel" HorizontalAlignment="Left" Margin="298,201,0,0" TextWrapping="Wrap" Text="Number of words:" VerticalAlignment="Top" FontSize="23" FontFamily="Times, Times New Roman, serif"/>
+        <TextBlock Name="numWordsBox" HorizontalAlignment="Left" Margin="472,201,0,0" TextWrapping="Wrap" TextAlignment="Left" Text="TextBlock" VerticalAlignment="Top" FontSize="23" FontFamily="Times, Times New Roman, serif" Width="135"/>
+        <TextBlock Name="statusOfGuess" TextAlignment="Center" FontSize="20" FontFamily="Times, Times New Roman, serif" HorizontalAlignment="Center" Margin="0,283,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="310"/>
+        <Button Name="playAgainButton" Click="playAgainButton_Click" Visibility = "Collapsed" FontFamily="Times, Times New Roman, serif" FontSize="30" Content="Play Again" HorizontalAlignment="Center" Margin="0,295,0,0" VerticalAlignment="Top"/>
+        <TextBlock Name="playAgainBlock" FontSize="25" FontFamily="Times, Times New Roman, serif" Visibility = "Collapsed" TextAlignment="Center" HorizontalAlignment="Center" Margin="0,167,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top" Width="488"/>
+        <Label Name="timeLabel" FontSize="30" Content="00:00" FontFamily="Times, Times New Roman, serif" HorizontalAlignment="Left" Margin="682,30,0,0" VerticalAlignment="Top" Height="42" Width="84"/>
+        <Button Name="exitButton" Visibility="Collapsed" FontFamily="Times, Times New Roman, serif" Foreground="DarkRed" FontSize="30" Content="Exit" HorizontalAlignment="Left" Margin="682,341,0,0" VerticalAlignment="Top" Click="Exit_Click"/>
+    </Grid>
+</Window>
